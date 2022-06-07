@@ -9,5 +9,6 @@
   },
   "author": "Sy Rashid <sy.rashid.11@gmail.com>",
   "license": "MIT",
-  "keywords": ["cookie", "cookie monster", "browser cookies", "simple", "lightweight"]
+  "keywords": ["cookie", "cookie monster", "browser cookies", "simple", "lightweight"],
+  "bugs": "https://github.com/you/cookie-monster/issues"
 }
