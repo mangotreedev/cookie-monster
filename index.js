@@ -1,4 +1,4 @@
-const cookieMonster = () => {
+export const cookieMonster = () => {
   return {
     setCookie(cname, cvalue, exdays = 1) {
       const d = new Date();
@@ -49,5 +49,3 @@ const cookieMonster = () => {
     },
   };
 };
-
-export default cookieMonster;
