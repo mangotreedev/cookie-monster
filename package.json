@@ -1,14 +1,23 @@
 {
-  "name": "cookie-monster",
+  "name": "@syrashid/cookie-monster",
   "version": "1.0.0",
   "description": "Simply, easily, hilariously handle your cookies.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/syrashid/cookie-monster.git"
+    "url": "git+https://github.com/syrashid/cookie-monster.git"
   },
   "author": "Sy Rashid <sy.rashid.11@gmail.com>",
   "license": "MIT",
-  "keywords": ["cookie", "cookie monster", "browser cookies", "simple", "lightweight"],
-  "bugs": "https://github.com/you/cookie-monster/issues"
+  "keywords": [
+    "cookie",
+    "cookie monster",
+    "browser cookies",
+    "simple",
+    "lightweight"
+  ],
+  "bugs": {
+    "url": "https://github.com/you/cookie-monster/issues"
+  },
+  "homepage": "https://github.com/syrashid/cookie-monster#readme"
 }
