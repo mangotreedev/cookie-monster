@@ -9,6 +9,11 @@ const cookieMonster = () => {
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     },
 
+    // Alias for setCookie
+    bakeCookie(cname, cvalue, exdays = 1) {
+      this.setCookie(cname, cvalue, exdays);
+    },
+
     getCookie(cname) {
       let name = cname + "=";
       let ca = document.cookie.split(";");
