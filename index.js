@@ -29,6 +29,14 @@ const cookieMonster = () => {
       return "";
     },
 
+    // Aliases for getCookie
+    readCookie(cname) {
+      this.getCookie(cname);
+    },
+    findCookie(cname) {
+      this.getCookie(cname);
+    },
+
     hasCookie(cname) {
       return "" !== this.getCookie(cname);
     },
