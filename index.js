@@ -1,5 +1,3 @@
-export default cookieMonster;
-
 const cookieMonster = () => {
   return {
     setCookie(cname, cvalue, exdays = 1) {
@@ -51,3 +49,5 @@ const cookieMonster = () => {
     },
   };
 };
+
+export default cookieMonster;

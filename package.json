@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/you/cookie-monster/issues"
   },
-  "homepage": "https://github.com/syrashid/cookie-monster#readme"
+  "homepage": "https://github.com/syrashid/cookie-monster#readme",
+  "type": "module"
 }
