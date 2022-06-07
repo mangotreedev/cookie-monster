@@ -1,0 +1,8 @@
+{
+  "name": "cookie-monster",
+  "version": "1.0.0",
+  "description": "Simply, easily, hilariously handle your cookies.",
+  "main": "index.js",
+  "author": "Sy Rashid <sy.rashid.11@gmail.com>",
+  "license": "MIT"
+}
