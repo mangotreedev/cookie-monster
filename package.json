@@ -8,5 +8,6 @@
     "url": "https://github.com/syrashid/cookie-monster.git"
   },
   "author": "Sy Rashid <sy.rashid.11@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": ["cookie", "cookie monster", "browser cookies", "simple", "lightweight"]
 }
