@@ -37,6 +37,10 @@ const cookieMonster = () => {
       this.getCookie(cname);
     },
 
+    deleteCookie(cname) {
+      document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    },
+
     hasCookie(cname) {
       return "" !== this.getCookie(cname);
     },
