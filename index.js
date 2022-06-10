@@ -5,7 +5,6 @@
 // TODO: Add secure attribute
 // TODO: Some form of browser compatibility testing
 // TODO: Cookie encryption
-// TODO: Add cookie monster song if connected properly
 
 export const cookieMonster = () => {
 
