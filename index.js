@@ -2,7 +2,6 @@
 // TODO: Set up with webpack and babel to make it compatible across multiple browsers
 // TODO: Beef up readme
 // TODO: Add tests?
-// TODO: Add secure attribute
 // TODO: Some form of browser compatibility testing
 // TODO: Cookie encryption
 
@@ -150,21 +149,37 @@ export const cookieMonster = () => {
     return songArr[Math.floor(Math.random() * songArr.length)];
   }
 
+  function processOptions(rawOptions) {
+    const options = {extime: {}};
+    if (rawOptions.extime && (rawOptions.extime.days || rawOptions.extime.hours || rawOptions.extime.minutes)) {
+      options.extime.days = rawOptions.extime.days || 0;
+      options.extime.hours = rawOptions.extime.hours || 0;
+      options.extime.minutes = rawOptions.extime.minutes || 0;
+    } else {
+      options.extime.days = 1;
+    }
+
+    options.path = rawOptions.path || '/';
+
+    options.secure = rawOptions.secure ? 'secure' : '';
+  }
+
   return {
     singCookieSong() {
       console.log(pickRandomSong());
     },
 
-    setCookie(cname, cvalue, extime = { days: 1, hours: 0, minutes: 0 }, path = "/") {
+    setCookie(cname, cvalue, rawOptions = {}) {
+      const options = processOptions(rawOptions);
       const d = new Date();
-      d.setTime(d.getTime() + convertToMilliSeconds(extime));
+      d.setTime(d.getTime() + convertToMilliSeconds(options.extime));
       let expires = "expires=" + d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=" + path;
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=" + options.path + ';' + options.secure;
     },
 
     // Alias for setCookie
-    bakeCookie(cname, cvalue, extime = { days: 1, hours: 0, minutes: 0 }, path = "/") {
-      this.setCookie(cname, cvalue, extime, path);
+    bakeCookie(cname, cvalue, rawOptions = {}) {
+      this.setCookie(cname, cvalue, rawOptions);
     },
 
     getCookie(cname) {
