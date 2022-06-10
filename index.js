@@ -10,16 +10,21 @@
 // TODO: Cookie encryption
 // TODO: Add cookie monster song if connected properly
 
-const convertToMilliSeconds = (extime) => {
-  const daySeconds = extime.days * 24 * 60 * 60 * 1000
-  const hourSeconds = extime.hours * 60 * 60 * 1000;
-  const minSeconds = extime.minutes * 60 * 1000;
-  return daySeconds + hourSeconds + minSeconds;
-}
+let document = {}
+
+
 
 export const cookieMonster = () => {
+
+  function convertToMilliSeconds(extime) {
+    const daySeconds = (extime.days || 0) * 24 * 60 * 60 * 1000;
+    const hourSeconds = (extime.hours || 0) * 60 * 60 * 1000;
+    const minSeconds = (extime.minutes || 0) * 60 * 1000;
+    return daySeconds + hourSeconds + minSeconds;
+  }
+
   return {
-    setCookie(cname, cvalue, extime = {days: 1, hours: 0, minutes: 0}, path = '/') {
+    setCookie(cname, cvalue, extime = { days: 1, hours: 0, minutes: 0 }, path = "/") {
       const d = new Date();
       d.setTime(d.getTime() + convertToMilliSeconds(extime));
       let expires = "expires=" + d.toUTCString();
@@ -55,7 +60,8 @@ export const cookieMonster = () => {
     },
 
     deleteCookie(cname) {
-      document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+      document.cookie =
+        cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
     },
 
     // Alias for deleteCookie
@@ -67,4 +73,6 @@ export const cookieMonster = () => {
       return "" !== this.getCookie(cname);
     },
   };
-};
+};;
+
+cookieMonster().setCookie("test2", "value", { days: 4 });
