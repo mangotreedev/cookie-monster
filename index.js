@@ -1,3 +1,15 @@
+// TODO: Change the way expire days is passed
+// TODO: Allow users to provide the path, both for set and delete
+// TODO: Research RFC 6265 encoding
+// TODO: Set mangotree as the scoping organization
+// TODO: Set up with webpack and babel to make it compatible across multiple browsers
+// TODO: Beef up readme
+// TODO: Add tests?
+// TODO: Add secure attribute
+// TODO: Some form of browser compatibility testing
+// TODO: Cookie encryption
+// TODO: Add cookie monster song if connected properly
+
 export const cookieMonster = () => {
   return {
     setCookie(cname, cvalue, exdays = 1) {
