@@ -1,4 +1,4 @@
-// TODO: Research RFC 6265 encoding
+// TODO: Research RFC 6265 encoding, link the following in the readme https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html
 // TODO: Set mangotree as the scoping organization
 // TODO: Set up with webpack and babel to make it compatible across multiple browsers
 // TODO: Beef up readme
@@ -7,10 +7,6 @@
 // TODO: Some form of browser compatibility testing
 // TODO: Cookie encryption
 // TODO: Add cookie monster song if connected properly
-
-let document = {}
-
-
 
 export const cookieMonster = () => {
 
@@ -72,5 +68,3 @@ export const cookieMonster = () => {
     },
   };
 };
-
-cookieMonster().setCookie("test2", "value", { days: 4 });
