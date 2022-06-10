@@ -1,5 +1,3 @@
-// TODO: Change the way expire days is passed
-// TODO: Allow users to provide the path, both for set and delete
 // TODO: Research RFC 6265 encoding
 // TODO: Set mangotree as the scoping organization
 // TODO: Set up with webpack and babel to make it compatible across multiple browsers
@@ -32,8 +30,8 @@ export const cookieMonster = () => {
     },
 
     // Alias for setCookie
-    bakeCookie(cname, cvalue, exdays = 1) {
-      this.setCookie(cname, cvalue, exdays);
+    bakeCookie(cname, cvalue, extime = { days: 1, hours: 0, minutes: 0 }, path = "/") {
+      this.setCookie(cname, cvalue, extime, path);
     },
 
     getCookie(cname) {
@@ -73,6 +71,6 @@ export const cookieMonster = () => {
       return "" !== this.getCookie(cname);
     },
   };
-};;
+};
 
 cookieMonster().setCookie("test2", "value", { days: 4 });
