@@ -10,13 +10,20 @@
 // TODO: Cookie encryption
 // TODO: Add cookie monster song if connected properly
 
+const convertToMilliSeconds = (extime) => {
+  const daySeconds = extime.days * 24 * 60 * 60 * 1000
+  const hourSeconds = extime.hours * 60 * 60 * 1000;
+  const minSeconds = extime.minutes * 60 * 1000;
+  return daySeconds + hourSeconds + minSeconds;
+}
+
 export const cookieMonster = () => {
   return {
-    setCookie(cname, cvalue, exdays = 1) {
+    setCookie(cname, cvalue, extime = {days: 1, hours: 0, minutes: 0}, path = '/') {
       const d = new Date();
-      d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+      d.setTime(d.getTime() + convertToMilliSeconds(extime));
       let expires = "expires=" + d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=" + path;
     },
 
     // Alias for setCookie
