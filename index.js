@@ -184,6 +184,13 @@ export const cookieMonster = () => {
 
     // Add Test
     setCookie(cname, cvalue, rawOptions = {}) {
+      validatePresenceOf(cname);
+      validatePresenceOf(cvalue);
+
+      validateTypeOf(cname, 'string');
+      validateTypeOf(cvalue, 'string');
+      validateTypeOf(rawOptions, 'object');
+
       const options = processOptions(rawOptions);
       const d = new Date();
       d.setTime(d.getTime() + convertToMilliSeconds(options.extime));
