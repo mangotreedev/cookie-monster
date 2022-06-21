@@ -187,7 +187,7 @@ export const cookieMonster = () => {
     // Add Test
     getCookie(cname) {
       if (!cname) {
-        throw 'Missing Cookie Name Error';
+        throw 'Missing Argument Exception';
       }
 
       let name = cname + "=";
@@ -214,7 +214,7 @@ export const cookieMonster = () => {
     // Add Test
     deleteCookie(cname) {
       if (!cname) {
-        throw "Missing Cookie Name Error";
+        throw "Missing Argument Exception";
       }
 
       document.cookie =
@@ -228,7 +228,7 @@ export const cookieMonster = () => {
     // Add Test
     hasCookie(cname) {
       if (!cname) {
-        throw "Missing Cookie Name Error";
+        throw "Missing Argument Exception";
       }
 
       return "" !== this.getCookie(cname);
