@@ -192,9 +192,7 @@ export const cookieMonster = () => {
 
     // Add Test
     getCookie(cname) {
-      if (!cname) {
-        throw 'Missing/Invalid Argument Exception';
-      }
+      validatePresenceOf(cname);
 
       let name = cname + "=";
       let ca = document.cookie.split(";");
@@ -219,9 +217,7 @@ export const cookieMonster = () => {
     },
     // Add Test
     deleteCookie(cname) {
-      if (!cname) {
-        throw "Missing/Invalid Argument Exception";
-      }
+      validatePresenceOf(cname);
 
       document.cookie =
       cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
