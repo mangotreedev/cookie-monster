@@ -165,6 +165,12 @@ export const cookieMonster = () => {
     options.secure = rawOptions.secure ? 'secure' : '';
   }
 
+  function validatePresenceOf(arg) {
+    if (!arg) {
+      throw new Error('Missing/Invalid Required Argument');
+    }
+  }
+
   return {
     singCookieSong() {
       console.log(pickRandomSong());
@@ -227,9 +233,7 @@ export const cookieMonster = () => {
     },
     // Add Test
     hasCookie(cname) {
-      if (!cname) {
-        throw "Missing/Invalid Argument Exception";
-      }
+      validatePresenceOf(cname);
 
       return "" !== this.getCookie(cname);
     },
