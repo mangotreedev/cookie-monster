@@ -1,9 +1,9 @@
+const path = require("path");
+
 module.exports = {
-  // Entry Point
-  entry: "./src/index.js",
-  // Output Point
+  entry: path.resolve(__dirname, "./src/index.js"),
   output: {
-    path: "/dist",
+    path: path.resolve(__dirname, "./dist"),
     filename: "index.js",
   }
 };
