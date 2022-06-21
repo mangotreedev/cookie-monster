@@ -171,6 +171,12 @@ export const cookieMonster = () => {
     }
   }
 
+  function validateTypeOf(arg, argClass) {
+    if (typeof arg != argClass) {
+      throw new Error("Invalid Argument Type");
+    }
+  }
+
   return {
     singCookieSong() {
       console.log(pickRandomSong());
