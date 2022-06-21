@@ -213,6 +213,10 @@ export const cookieMonster = () => {
     },
     // Add Test
     deleteCookie(cname) {
+      if (!cname) {
+        throw "Missing Cookie Name Error";
+      }
+
       document.cookie =
       cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
     },
@@ -223,6 +227,10 @@ export const cookieMonster = () => {
     },
     // Add Test
     hasCookie(cname) {
+      if (!cname) {
+        throw "Missing Cookie Name Error";
+      }
+
       return "" !== this.getCookie(cname);
     },
   };
