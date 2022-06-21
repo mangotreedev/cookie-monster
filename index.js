@@ -161,6 +161,8 @@ export const cookieMonster = () => {
     options.path = rawOptions.path || '/';
 
     options.secure = rawOptions.secure ? 'secure' : '';
+
+    return options;
   }
 
   function validatePresenceOf(arg) {
@@ -249,3 +251,5 @@ export const cookieMonster = () => {
     },
   };
 };
+
+cookieMonster().setCookie('test', 'value');
