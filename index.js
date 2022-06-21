@@ -1,10 +1,8 @@
-// TODO: Research RFC 6265 encoding, link the following in the readme https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html
 // TODO: Set up with webpack and babel to make it compatible across multiple browsers
 // TODO: Beef up readme
 // TODO: Add tests?
 // TODO: Some form of browser compatibility testing
-// TODO: Cookie encryption
-// TODO: Add error handling
+// TODO: Cookie encryption (Add as an issue)
 
 export const cookieMonster = () => {
 
