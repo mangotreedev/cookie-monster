@@ -199,6 +199,7 @@ export const cookieMonster = () => {
     // Add Test
     getCookie(cname) {
       validatePresenceOf(cname);
+      validateTypeOf(cname, 'string');
 
       let name = cname + "=";
       let ca = document.cookie.split(";");
@@ -224,6 +225,7 @@ export const cookieMonster = () => {
     // Add Test
     deleteCookie(cname) {
       validatePresenceOf(cname);
+      validateTypeOf(cname, "string");
 
       document.cookie =
       cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
@@ -236,6 +238,7 @@ export const cookieMonster = () => {
     // Add Test
     hasCookie(cname) {
       validatePresenceOf(cname);
+      validateTypeOf(cname, "string");
 
       return "" !== this.getCookie(cname);
     },
