@@ -252,4 +252,4 @@ export const cookieMonster = () => {
   };
 };
 
-cookieMonster().setCookie('test', 'value');
+cookieMonster().singCookieSong();
