@@ -186,6 +186,10 @@ export const cookieMonster = () => {
 
     // Add Test
     getCookie(cname) {
+      if (!cname) {
+        throw 'Missing Cookie Name Error';
+      }
+
       let name = cname + "=";
       let ca = document.cookie.split(";");
       for (let i = 0; i < ca.length; i++) {
