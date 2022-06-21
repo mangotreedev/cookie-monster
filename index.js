@@ -4,6 +4,7 @@
 // TODO: Add tests?
 // TODO: Some form of browser compatibility testing
 // TODO: Cookie encryption
+// TODO: Add error handling
 
 export const cookieMonster = () => {
 
@@ -169,6 +170,7 @@ export const cookieMonster = () => {
       console.log(pickRandomSong());
     },
 
+    // Add Test
     setCookie(cname, cvalue, rawOptions = {}) {
       const options = processOptions(rawOptions);
       const d = new Date();
@@ -182,6 +184,7 @@ export const cookieMonster = () => {
       this.setCookie(cname, cvalue, rawOptions);
     },
 
+    // Add Test
     getCookie(cname) {
       let name = cname + "=";
       let ca = document.cookie.split(";");
@@ -204,7 +207,7 @@ export const cookieMonster = () => {
     findCookie(cname) {
       this.getCookie(cname);
     },
-
+    // Add Test
     deleteCookie(cname) {
       document.cookie =
       cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
@@ -214,7 +217,7 @@ export const cookieMonster = () => {
     eatCookie(cname) {
       this.deleteCookie(cname);
     },
-
+    // Add Test
     hasCookie(cname) {
       return "" !== this.getCookie(cname);
     },
