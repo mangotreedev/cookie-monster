@@ -20,5 +20,8 @@
     "url": "https://github.com/mangotreedev/cookie-monster/issues"
   },
   "homepage": "https://github.com/mangotreedev/cookie-monster#readme",
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "type": "module"
 }
