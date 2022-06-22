@@ -23,6 +23,11 @@
   "scripts": {
     "start": "webpack serve --config ./webpack.config.js --mode development"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "type": "module",
   "devDependencies": {
     "@babel/core": "^7.18.5",
