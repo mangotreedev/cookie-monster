@@ -21,12 +21,9 @@
   },
   "homepage": "https://github.com/mangotreedev/cookie-monster#readme",
   "scripts": {
-    "start": "webpack serve --config ./webpack.config.js --mode development"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
+    "start": "webpack serve --config ./webpack.config.js --mode development",
+    "build": "webpack --config ./webpack.config.js --mode production",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "type": "module",
   "devDependencies": {
