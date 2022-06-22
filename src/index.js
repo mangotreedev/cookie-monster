@@ -1,4 +1,3 @@
-// TODO: Set up with webpack and babel to make it compatible across multiple browsers
 // TODO: Beef up readme
 // TODO: Add tests?
 // TODO: Some form of browser compatibility testing
