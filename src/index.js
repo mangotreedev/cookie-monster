@@ -3,6 +3,4 @@
 // TODO: Some form of browser compatibility testing
 // TODO: Cookie encryption (Add as an issue)
 
-
-
-cookieMonster().singCookieSong();
+import { cookieMonster } from "./cookie_monster";
